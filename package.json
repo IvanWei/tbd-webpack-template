@@ -1,0 +1,63 @@
+{
+  "private": true,
+  "name": "tbd-webpack-template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "echo start server!!",
+    "build": "NODE_ENV=production node config/entry/build-prod-server.js",
+    "dev": "NODE_ENV=development node config/entry/dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanwei/tbd-webpack-template.git"
+  },
+  "keywords": [
+    "webpack",
+    "sass",
+    "typescript"
+  ],
+  "author": "Ivan Wei <scorpionseed@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanwei/tbd-webpack-template/issues"
+  },
+  "homepage": "https://github.com/ivanwei/tbd-webpack-template#readme",
+  "engines": {
+    "node": ">= 12.13.0",
+    "npm": ">= 6.12.1",
+    "yarn": ">= 1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "babel-loader": "^8.0.6",
+    "brotli-webpack-plugin": "^1.1.0",
+    "chalk": "^3.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.1",
+    "csso-webpack-plugin": "^1.0.0-beta.12",
+    "express": "^4.17.1",
+    "file-loader": "^5.0.2",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "helmet": "^3.21.2",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "lodash": "^4.17.15",
+    "mini-css-extract-plugin": "^0.8.0",
+    "ora": "^4.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
