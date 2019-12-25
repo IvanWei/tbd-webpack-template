@@ -52,49 +52,40 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts(x?)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'ts-loader',
-          }
-        ]
-      },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       envName: NODE_ENV,
-      //       babelrc: false,
-      //       presets: [
-      //         [
-      //           '@babel/preset-env',
-      //           {
-      //             targets: {
-      //               esmodules: true,
-      //               node: true,
-      //               // browsers: [
+        use: {
+          loader: 'babel-loader',
+          options: {
+            envName: NODE_ENV,
+            babelrc: false,
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: {
+                    esmodules: true,
+                    node: true,
+                    // browsers: [
 
-      //               // ],
-      //             }
-      //           },
-      //         ],
-      //       ],
-      //       plugins: ['@babel/plugin-syntax-dynamic-import'],
-      //     },
-      //   },
-      // },
-      // {
-      //   test: /\.(eot|ttf|woff|woff2)$/,
-      //   use: {
-      //     loader: 'file-loader',
-      //     options: {
-      //       name: '[name].[ext]',
-      //     },
-      //   },
-      // },
+                    // ],
+                  }
+                },
+              ],
+            ],
+            plugins: ['@babel/plugin-syntax-dynamic-import'],
+          },
+        },
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          },
+        },
+      },
     ],
   },
 };
